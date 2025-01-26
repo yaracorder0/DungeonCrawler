@@ -19,7 +19,20 @@ public class CommandFactory {
         commandRegistry = new HashMap<>();
 
         commandRegistry.put("move", cm -> new MovementCommand(cm.length > 1 ? cm[1] : ""));
+        commandRegistry.put("i", cm -> new InventoryCommand());
+        commandRegistry.put("inventory", cm -> new InventoryCommand());
         commandRegistry.put("look", cm -> new LookCommand(cm.length > 1 ? cm[1] : ""));
+        commandRegistry.put("take", cm -> new TakeCommand(cm.length > 1 ? cm[1] : ""));
+        commandRegistry.put("use", cm -> {
+            if(cm.length > 2) {
+                return new UseCommand(cm[1], cm[2]);
+            } else {
+                return new UnknownCommand(String.join(" ", cm));
+            }
+        });
+
+        commandRegistry.put("exit", cm -> new AssistCommands("exit"));
+        commandRegistry.put("help", cm -> new AssistCommands("help"));
     }
 
     public static CommandFactory instance() {
@@ -29,10 +42,8 @@ public class CommandFactory {
         return instance;
     }
 
-
     public Command parse(String commandString) {
         commandString = commandString.trim();
-
         String[] splitCommand = commandString.split(REGEX);
 
         if(splitCommand.length > 0){
@@ -64,7 +75,6 @@ public class CommandFactory {
             roomItems = new HashSet<>();
         }
 
-        // Check both inventory and current room for the item
         for (Item item : inventory) {
             if (item.goesBy(itemName) && item.getMessageForVerb(verb) != null) {
                 return true;
