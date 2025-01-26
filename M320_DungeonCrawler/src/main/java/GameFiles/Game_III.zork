@@ -1,0 +1,85 @@
+Yara's House
+===
+Items:
+TaxidermyDeerHead,deerHead
+It's eyes bore into your head.
+6
+---
+wobblyCatFigure,figurine
+The cat's head wobbles side to side.
+2
+---
+catPlushie,plushie
+It oddly resembles a Squishmellow.
+1
+touch: fluffy
+bite: mhmm.
+---
+apple
+A basic apple.
+2
+eat: yummy
+---
+knife
+Very sharp, japanese knife.
+1
+---
+WimbledonTrophy,trophy
+Old but golden, Tennis Trophy.
+3
+---
+Key
+GoldenKey
+A shiny golden key.
+1
+---
+===
+Rooms:
+Entry
+Contents: TaxidermyDeerHead: A large and old TaxidermyDeerHead hangs on the wall.
+This is a narrow entry way to a seemingly large house.
+---
+Living Room
+Contents: wobblyCatFigure: Lying on the floor a wobblyCatFigure,catPlushie: A catPlushie sits on the sofa.
+The living room is decorated with all kinds of cats.
+May it be small or large, all cat memorabilia seems to have its place here.
+There is a wide arched doorway east to you.
+---
+Kitchen
+Contents: apple: On the faraway table lies an apple.,knife: A knife is stuck on a cutting board.,GoldenKey: A GoldenKey lies on the countertop.
+A small but cozy kitchen, with big amounts of machines, such as an ice cream, mixer and washing machine.
+To the south is a Pantry.
+---
+Pantry
+Contents: WimbledonTrophy: A WimbledonTrophy sits on a shelf.
+It's mostly empty except for some canned food.
+---
+===
+Exits:
+Entry
+north
+Living Room
+---
+Living Room
+south
+Entry
+---
+Living Room
+east
+Kitchen
+---
+Kitchen
+west
+Living Room
+---
+Kitchen
+south
+Pantry
+GoldenKey
+---
+Pantry
+north
+Kitchen
+GoldenKey
+---
+===

@@ -14,7 +14,7 @@ public class LookCommand implements Command {
 
     @Override
     public String execute() {
-        if (itemName == null){
+        if (itemName.equals("")){
             Room currentRoom = GameState.instance().getAdventurersCurrentRoom();
             return currentRoom.getDesc();
         } else {
