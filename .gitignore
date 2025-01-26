@@ -28,3 +28,4 @@ bin/
 ### Mac OS ###
 .DS_Store
 /M320_DungeonCrawler/.idea
+M320_DungeonCrawler/.idea/discord.xml
