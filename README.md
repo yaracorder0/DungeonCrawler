@@ -1,4 +1,4 @@
-# Dungeon Crawler 
+   # Dungeon Crawler 
 
 ### Description 
 One of the first text-based videogames was Zork. This game is based of the principles of Zork, which is considered a
@@ -10,13 +10,14 @@ where the game takes place.
 <br>
 This is the first version of the Dungeon Crawler. 
 I did not make this class diagram. 
-![image](https://github.com/user-attachments/assets/4bfa3cb2-c365-42fa-8eb4-f99fe5709f1f)
+[image](https://github.com/user-attachments/assets/4bfa3cb2-c365-42fa-8eb4-f99fe5709f1f)
+
 [link to original](http://stephendavies.org/cpsc240/zorkI.html)
 <br>
 <br>
 ## Class Diagram
 
-![class_diagramm](https://github.com/user-attachments/assets/6ea29817-adb4-444d-96e3-4fbc35507095) 
+![Class_Diagram_M320 drawio](https://github.com/user-attachments/assets/f8ed9f01-1fab-4fbf-b292-d0924c1b8c50)
 <br>
 <br>
 ## Sequence Diagram 
